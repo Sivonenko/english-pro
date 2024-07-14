@@ -1,0 +1,141 @@
+/* Testimonials styles */
+.section-students {
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
+[data-animation-reviews='can-load'] .fade-in-animation {
+  opacity: 0;
+  animation: fade-in 2s ease forwards;
+}
+
+.fade-in-animation#review-card-01 {
+  animation-delay: 0ms;
+}
+
+.fade-in-animation#review-card-02 {
+  animation-delay: 200ms;
+}
+
+.fade-in-animation#review-card-03 {
+  animation-delay: 400ms;
+}
+
+.reviews.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.student-list-cards {
+  display: flex;
+  justify-content: center;
+  gap: 32px; 
+}
+
+.student-list-review-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 20px 40px;
+  border-radius: 16px;
+  background: var(--gray);
+}
+
+.student-profile {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 14px;
+  border-radius: 8px;
+  height: 78px;
+  background: var(--green);
+}
+
+.testimonials-text {
+  overflow-y: auto;
+  font-weight: var(--font-weight-primary-regular);
+  font-size: 14px;
+  line-height: 1.71429;
+  color: var(--light-black);
+  padding: 0 14px;
+}
+
+@media only screen and (min-width: 768px) {
+  .section-students {
+    padding-top: 50px;
+    padding-bottom: 100px;
+  }
+
+  .testimonials-text {
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 0 16px;
+  }
+
+  .student-list-cards {
+    --items: 2;
+  }
+
+  .student-list-review-cards {
+    border-radius: 30px;
+    gap: 32px;
+    padding: 32px 16px 40px;
+    width: calc((100% - 32px * (var(--items) - 1)) / var(--items));
+  }
+
+  .student-profile {
+    border-radius: 15px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .section-students {
+    padding-top: 75px;
+    padding-bottom: 150px;
+  }
+
+  .student-list-cards {
+    --items: 3;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .student-list-cards .student-list-review-cards:not(:first-child) {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1279px) and (min-width: 768px) {
+  .student-list-cards .student-list-review-cards:not(:first-child):not(:nth-child(2)) {
+    display: none;
+  }
+}
+
+.student-profile-picture {
+  border-radius: 50%; 
+}
+
+.student-test-grean {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.student-profile-name, .student-profile-subtitle {
+  letter-spacing: -0.02em;
+  color: var(--white); 
+}
+
+.student-profile-name {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.student-profile-subtitle {
+  font-size: 12px;
+  line-height: 1.33333;
+  opacity: 0.5;
+}
+
+/* #endregion Testimonials */
